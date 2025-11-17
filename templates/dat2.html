@@ -1,0 +1,30 @@
+<html>
+        <head> <title>Show data in DB</title> </head>
+
+<body>
+<center><h1>Movie List<h1></center>
+<center>
+<img src="static/1.jpg" width="663" height="1000" /><img>
+<img src="static/2.jpg" width="663" height="1000" /><img>
+<img src="static/3.jpg" width="663" height="1000" /><img>
+<img src="static/4.jpg" width="663" height="1000" /><img>
+<img src="static/5.jpg" width="663" height="1000" /><img></center>
+                <center><table border="1" bordercolor="#ff0000">
+                        <tr>
+                                <th>MID</th>
+                                <th>Movie Name</th>
+                                <th>Realease Date</th>
+                                <th>Genre</th>
+                                <th>Country</th>
+                        </tr>
+                        {% for row in contacts %}
+                        <tr>
+                                {% for col in row %}
+                                <td>{{ col }}</td>
+                                {% endfor %}
+                        </tr>
+                        {% endfor %}
+                </table>
+        </div>
+</body>
+</html>
