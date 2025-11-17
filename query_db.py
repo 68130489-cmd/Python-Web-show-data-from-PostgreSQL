@@ -1,5 +1,4 @@
 import psycopg2
-
 def select(): 
   try:
     # Establish a connection to the PostgreSQL database
@@ -9,7 +8,6 @@ def select():
         user="test",
         password="p@ssw0rd"
     )
-
     # Create a cursor object to execute SQL commands
     cur = conn.cursor()
 
@@ -18,8 +16,6 @@ def select():
 
     # Fetch all results
     rows = cur.fetchall()
-
-
     # Print the fetched rows
 #    for row in rows:
 #        print(row)
